@@ -1,3 +1,0 @@
-# EduGenie application package
-
-
