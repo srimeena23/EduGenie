@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie - AI Learning Assistant</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <div class="container navbar">
+
+        <div class="logo">
+            Edu<span>Genie</span>
+        </div>
+
+        <nav>
+
+            <a href="#ask">Ask</a>
+
+            <a href="#explain">Explain</a>
+
+            <a href="#quiz">Quiz</a>
+
+            <a href="#learning">Learning Path</a>
+
+            <a href="#summary">Summarize</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <h1>
+                Learn Smarter with
+                <span>EduGenie</span>
+            </h1>
+
+            <p>
+                Your AI-powered learning assistant for
+                explanations, quizzes, summaries and
+                personalized learning paths.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- FEATURES -->
+
+    <section class="features container">
+
+
+        <!-- ASK -->
+
+        <div
+            class="card"
+            id="ask"
+        >
+
+            <h2>
+                🤖 Ask EduGenie
+            </h2>
+
+            <p>
+                Ask any educational question and
+                get a clear AI-generated answer.
+            </p>
+
+
+            <form id="askForm">
+
+                <label for="question">
+                    Your Question
+                </label>
+
+                <textarea
+                    id="question"
+                    placeholder="Example: What is Artificial Intelligence?"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Ask Question
+                </button>
+
+            </form>
+
+
+            <div
+                id="askResult"
+                class="result"
+            ></div>
+
+        </div>
+
+
+
+        <!-- EXPLAIN -->
+
+        <div
+            class="card"
+            id="explain"
+        >
+
+            <h2>
+                💡 Explain Simply
+            </h2>
+
+            <p>
+                Understand difficult concepts
+                using beginner-friendly explanations.
+            </p>
+
+
+            <form id="explainForm">
+
+                <label for="explainText">
+                    Concept
+                </label>
+
+                <textarea
+                    id="explainText"
+                    placeholder="Example: Object Oriented Programming"
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Explain
+                </button>
+
+            </form>
+
+
+            <div
+                id="explainResult"
+                class="result"
+            ></div>
+
+        </div>
+
+
+
+        <!-- QUIZ -->
+
+        <div
+            class="card"
+            id="quiz"
+        >
+
+            <h2>
+                📝 Generate Quiz
+            </h2>
+
+            <p>
+                Create multiple-choice questions
+                to test your knowledge.
+            </p>
+
+
+            <form id="quizForm">
+
+                <label for="quizTopic">
+                    Quiz Topic
+                </label>
+
+                <input
+                    type="text"
+                    id="quizTopic"
+                    placeholder="Example: Python Basics"
+                    required
+                >
+
+
+                <label for="numberOfQuestions">
+                    Number of Questions
+                </label>
+
+                <select id="numberOfQuestions">
+
+                    <option value="3">
+                        3
+                    </option>
+
+                    <option
+                        value="5"
+                        selected
+                    >
+                        5
+                    </option>
+
+                    <option value="7">
+                        7
+                    </option>
+
+                    <option value="10">
+                        10
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Generate Quiz
+                </button>
+
+            </form>
+
+
+            <div
+                id="quizResult"
+                class="result"
+            ></div>
+
+        </div>
+
+
+
+        <!-- LEARNING PATH -->
+
+        <div
+            class="card"
+            id="learning"
+        >
+
+            <h2>
+                🗺️ Learning Path
+            </h2>
+
+            <p>
+                Get a structured study plan
+                based on your topic and level.
+            </p>
+
+
+            <form id="learningPathForm">
+
+                <label for="learningTopic">
+                    Topic
+                </label>
+
+                <input
+                    type="text"
+                    id="learningTopic"
+                    placeholder="Example: Cybersecurity"
+                    required
+                >
+
+
+                <label for="learningLevel">
+                    Level
+                </label>
+
+                <select id="learningLevel">
+
+                    <option value="Beginner">
+                        Beginner
+                    </option>
+
+                    <option value="Intermediate">
+                        Intermediate
+                    </option>
+
+                    <option value="Advanced">
+                        Advanced
+                    </option>
+
+                </select>
+
+
+                <label for="learningWeeks">
+                    Duration
+                </label>
+
+                <select id="learningWeeks">
+
+                    <option value="4">
+                        4 Weeks
+                    </option>
+
+                    <option
+                        value="6"
+                        selected
+                    >
+                        6 Weeks
+                    </option>
+
+                    <option value="8">
+                        8 Weeks
+                    </option>
+
+                    <option value="12">
+                        12 Weeks
+                    </option>
+
+                </select>
+
+
+                <button type="submit">
+                    Build Learning Path
+                </button>
+
+            </form>
+
+
+            <div
+                id="learningPathResult"
+                class="result"
+            ></div>
+
+        </div>
+
+
+
+        <!-- SUMMARY -->
+
+        <div
+            class="card"
+            id="summary"
+        >
+
+            <h2>
+                📚 Summarize Text
+            </h2>
+
+            <p>
+                Convert long educational content
+                into simple study points.
+            </p>
+
+
+            <form id="summarizeForm">
+
+                <label for="summaryText">
+                    Text
+                </label>
+
+                <textarea
+                    id="summaryText"
+                    placeholder="Paste your text here..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Summarize
+                </button>
+
+            </form>
+
+
+            <div
+                id="summarizeResult"
+                class="result"
+            ></div>
+
+        </div>
+
+
+    </section>
+
+
+</main>
+
+
+
+<footer>
+
+    <div class="container">
+
+        <p>
+            EduGenie &copy; 2026
+        </p>
+
+        <p>
+            AI-powered learning assistant
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script
+    src="{{ url_for('static', path='app.js') }}"
+></script>
+
+
+</body>
+
+</html>
